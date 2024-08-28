@@ -1,0 +1,9 @@
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\BatchProcessingApplication.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\config\BatchConfiguration.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\config\DataSourceConfig.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\config\JobCompletionNotificationListener.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\config\TransactionItemProcessor.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\config\TransactionPreparedStatementSetter.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\helper\TransactionFieldSetMapper.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\helper\TransactionLineMapper.java
+C:\Users\mihailo.krstic\Documents\Spring Batch Flow\gs-batch-processing-main\src\main\java\com\example\batchprocessing\model\Transaction.java

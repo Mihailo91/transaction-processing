@@ -1,0 +1,9 @@
+com\example\batchprocessing\config\BatchConfiguration.class
+com\example\batchprocessing\config\TransactionItemProcessor.class
+com\example\batchprocessing\helper\TransactionFieldSetMapper.class
+com\example\batchprocessing\config\DataSourceConfig.class
+com\example\batchprocessing\config\TransactionPreparedStatementSetter.class
+com\example\batchprocessing\config\JobCompletionNotificationListener.class
+com\example\batchprocessing\model\Transaction.class
+com\example\batchprocessing\BatchProcessingApplication.class
+com\example\batchprocessing\helper\TransactionLineMapper.class
