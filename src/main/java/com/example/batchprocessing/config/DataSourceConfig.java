@@ -26,10 +26,10 @@ public class DataSourceConfig {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("oracle.jdbc.driver.OracleDriver");
-        dataSource.setUrl("jdbc:oracle:thin:@127.0.0.1:1521:orcl");
-        dataSource.setUsername("grace_portal");
-        dataSource.setPassword("grace_portal");
+        dataSource.setDriverClassName("org.postgresql.Driver");
+        dataSource.setUrl("jdbc:postgresql://localhost:5432/task");
+        dataSource.setUsername("postgres");
+        dataSource.setPassword("twingo");
 
         return dataSource;
     }
