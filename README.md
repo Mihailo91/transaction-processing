@@ -1,4 +1,4 @@
-# Bath transaction processing
+# Batch transaction processing
 
 Batch demo app for processing transactions from csv file. With batch job all transactions are analyzed and inserted into database with suspicious flag in column suspicious_activity
 
@@ -9,9 +9,9 @@ Batch demo app for processing transactions from csv file. With batch job all tra
 
 ## Setting up environments
 
-**Spring data flow**
+### Spring data flow
 
-Usefull resources
+**Usefull resources**
 * Database Configuration
 	https://docs.spring.io/spring-cloud-dataflow/docs/1.2.3.RELEASE/reference/html/configuration-rdbms.html
 	
@@ -21,15 +21,13 @@ Usefull resources
 * Download the Spring Cloud Data Flow Server (Shell) and Skiper Server by using the following commands:
 ```
 	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dataflow-server/2.11.4/spring-cloud-dataflow-server-2.11.4.jar
-```
-```
-	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dataflow-shell/2.11.4/spring-cloud-dataflow-shell-2.11.4.jar
-```
-```
-	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-skipper-server/2.11.4/spring-cloud-skipper-server-2.11.4.jar
-```	
 
-** Run Spring data flow server **
+	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dataflow-shell/2.11.4/spring-cloud-dataflow-shell-2.11.4.jar
+	
+	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-skipper-server/2.11.4/spring-cloud-skipper-server-2.11.4.jar
+```
+
+### Run Spring data flow server
 
 Run folowing comands inside the folder in which downloaded jars are located.
 ```
@@ -43,10 +41,10 @@ java -jar spring-cloud-dataflow-server-2.11.4.jar --spring.datasource.url=jdbc:p
 
 Spring Data Flow dashboard is available on this url:
 
-	* http://localhost:9393/dashboard/index.html#/apps
+-  http://localhost:9393/dashboard/index.html#/apps
 	
 	
-** Create a package for batch-procesing-app **
+### Create a package for batch-procesing-app
 
 ```
 mvnw clean package
