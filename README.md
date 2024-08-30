@@ -1,13 +1,13 @@
-# remarx
+# Bath transaction processing
 
-Batch demo app for processing transactions from csv file. With batch job all transactions are analyzed and inserted into database with flag in column suspicious_activity
+Batch demo app for processing transactions from csv file. With batch job all transactions are analyzed and inserted into database with suspicious flag in column suspicious_activity
 
 ## Technologies used
 - [ ] Spring Batch
 - [ ] Spring Data flow
 - [ ] postgress database
 
-##Setting up environments
+## Setting up environments
 
 **Spring data flow**
 
@@ -18,13 +18,18 @@ Usefull resources
 * Manual instalation
 	https://dataflow.spring.io/docs/installation/local/manual/
 	
-* Download the Spring Cloud Data Flow Server and shell by using the following commands:
-
+* Download the Spring Cloud Data Flow Server (Shell) and Skiper Server by using the following commands:
+```
 	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dataflow-server/2.11.4/spring-cloud-dataflow-server-2.11.4.jar
+```
+```
 	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-dataflow-shell/2.11.4/spring-cloud-dataflow-shell-2.11.4.jar
+```
+```
 	wget https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-skipper-server/2.11.4/spring-cloud-skipper-server-2.11.4.jar
-	
-**Run Spring data flow server **
+```	
+
+** Run Spring data flow server **
 
 Run folowing comands inside the folder in which downloaded jars are located.
 ```
@@ -38,15 +43,15 @@ java -jar spring-cloud-dataflow-server-2.11.4.jar --spring.datasource.url=jdbc:p
 
 Spring Data Flow dashboard is available on this url:
 
-	* http://localhost:9393/dashboard/index.html#/apps/add
+	* http://localhost:9393/dashboard/index.html#/apps
 	
 	
-**Create a package for batch-procesing-app**
+** Create a package for batch-procesing-app **
 
 ```
 mvnw clean package
 ```
-Copy jar form target folder to some location. This is importan because this jar will be used by data flow, and rebuilding of app won't be possible unless app is unregistered from data flow)
+Copy jar form target folder to some location. This is importan because this jar will be used by Spring Data Flow, and rebuilding of app won't be possible unless app is unregistered from Spring Data Flow)
 
 
 ## Running the application from data flow
