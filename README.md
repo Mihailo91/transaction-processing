@@ -11,7 +11,7 @@ Batch demo app for processing transactions from csv file. With batch job all tra
 
 ### Spring data flow
 
-**Usefull resources**
+**Useful resources**
 * Database Configuration
 	https://docs.spring.io/spring-cloud-dataflow/docs/1.2.3.RELEASE/reference/html/configuration-rdbms.html
 	
@@ -29,14 +29,13 @@ Batch demo app for processing transactions from csv file. With batch job all tra
 
 ### Run Spring data flow server
 
-Run folowing comands inside the folder in which downloaded jars are located.
+Run the following comands inside the folder in which downloaded jars are located.
 ```
 java -jar spring-cloud-skipper-server-2.11.4.jar
 ```
 
 ```
 java -jar spring-cloud-dataflow-server-2.11.4.jar --spring.datasource.url=jdbc:postgresql://localhost:5432/task --spring.datasource.username=postgres --spring.datasource.password=twingo --spring.datasource.driver-class-name=org.postgresql.Driver --spring.datasource.initialization-mode=always --spring.jpa.hibernate.ddl-auto=update --spring.jpa.show-sql=true
-
 ```
 
 Spring Data Flow dashboard is available on this url:
@@ -51,6 +50,26 @@ mvnw clean package
 ```
 Copy jar form target folder to some location. This is importan because this jar will be used by Spring Data Flow, and rebuilding of app won't be possible unless app is unregistered from Spring Data Flow)
 
+### Create the transaction table in the task database
+
+```
+CREATE TABLE public.transaction
+(
+    id bigint,
+    card_holder text COLLATE pg_catalog."default",
+    card_number text COLLATE pg_catalog."default",
+    amount numeric,
+    time_of_transaction timestamp(4) with time zone,
+    suspicious_activity smallint
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE public.transaction
+    OWNER to postgres;
+```
 
 ## Running the application from data flow
 
